@@ -1,0 +1,3 @@
+---
+- name: variable includes
+  include_vars: dbvars.yaml

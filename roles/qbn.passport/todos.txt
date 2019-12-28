@@ -1,0 +1,3 @@
+-debug the oracle_role module. it seems to be missing the "grants" directive. 
+-find a more elegant way to cleanup after a failed attempt
+-check existence of DB-Users before creation (both for safety and to avoid misleading errormessages.

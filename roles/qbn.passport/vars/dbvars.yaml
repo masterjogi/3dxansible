@@ -1,0 +1,21 @@
+# connection
+dbserver: audi1.net.qbn
+servicename: threedxp
+dbadminuser: system
+dbadminpassword: manager
+
+# application user schemas
+passadmin_schema: x3dpassadmin
+passtokens_schema: x3dpasstokens
+passadmin_schema_password: x3dpassadmin
+passtokens_schema_password: x3dpasstokens
+
+# tablespace names
+passadmin_tbs: x3dpassadmin
+passtokens_tbs: x3dpasstokens
+
+# base directory to be appended with above servicename and Tablespace names to build the "datafile" parameter
+dbfilebase: '/app/oracle/oradata'
+# tablespace filenames
+passtokens_dbf: passtokens.dbf 
+passadmin_dbf: passdb.dbf

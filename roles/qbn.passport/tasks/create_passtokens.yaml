@@ -1,0 +1,25 @@
+---
+- name: "create passtokens tablespace"
+  oracle_tablespace:
+      autoextend: true
+      datafile: "{{ dbfilebase }}/{{ servicename }}/{{ passtokens_dbf }}"
+      hostname: "{{ dbserver }}"
+      password: "{{ dbadminpassword }}"
+      service_name: "{{ servicename }}"
+      size: 10M
+      nextsize: 10M
+      state: "{{ onoff }}"
+      tablespace: "{{ passtokens_tbs }}"
+      user: "{{ dbadminuser }}"
+
+- name: "create passtokens user"
+  oracle_user:
+      hostname: "{{ dbserver }}"
+      password: "{{ dbadminpassword }}"
+      schema: "{{ passtokens_schema }}"
+      schema_password: "{{ passtokens_schema_password }}"
+      service_name: "{{ servicename }}"
+      state: "{{ onoff }}"
+      user: "{{ dbadminuser }}"
+      default_tablespace: "{{ passtokens_tbs }}"
+      grants: "{{ appserver_dbgrants }}"

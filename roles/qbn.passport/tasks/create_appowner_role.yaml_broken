@@ -1,0 +1,13 @@
+- name: "create application user role"
+  oracle_role:
+      hostname: "{{ dbserver }}"
+      password: "{{ dbadminpassword }}"
+      service_name: "{{ servicename }}"
+      user: "{{ dbadminuser }}"
+      #mode: sysdba
+      #      role: "{{ appserver_dbrole }}"
+      #            #grants: "{{ appserver_dbgrants }}"
+      #                  grants:
+      #                        #state: "{{ onoff }}"
+      #                              state: REMOVEALL
+      #

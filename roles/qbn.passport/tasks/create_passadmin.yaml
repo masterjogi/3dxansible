@@ -1,0 +1,25 @@
+---
+- name: "create passadmin tablespace"
+  oracle_tablespace:
+      autoextend: true
+      datafile: "{{ dbfilebase }}/{{ servicename }}/{{ passadmin_dbf }}"
+      hostname: "{{ dbserver }}"
+      password: "{{ dbadminpassword }}"
+      service_name: "{{ servicename }}"
+      size: 10M
+      nextsize: 10M
+      state: "{{ onoff }}"
+      tablespace: "{{ passadmin_tbs }}"
+      user: "{{ dbadminuser }}"
+
+- name: "create passadmin user"
+  oracle_user:
+      hostname: "{{ dbserver }}"
+      password: "{{ dbadminpassword }}"
+      schema: "{{ passadmin_schema }}"
+      schema_password: "{{ passadmin_schema_password }}"
+      service_name: "{{ servicename }}"
+      state: "{{ onoff }}"
+      user: "{{ dbadminuser }}"
+      default_tablespace: "{{ passadmin_tbs }}"
+      grants: "{{ appserver_dbgrants }}"
