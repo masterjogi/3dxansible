@@ -1,0 +1,6 @@
+---
+- hosts: Linux
+  tasks:
+    - name: check sudo
+      shell: /usr/bin/whoami >>/tmp/become
+  become: yes

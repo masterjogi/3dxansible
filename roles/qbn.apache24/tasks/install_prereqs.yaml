@@ -1,0 +1,37 @@
+---
+- name: current zlib devel
+  yum:
+    name: zlib-devel.x86_64
+    state: "{{ onoff }}"
+- name: current openssl 098
+  yum:
+    name: openssl
+    state: "{{ onoff }}"
+- name: current openssl devel
+  yum:
+    name: openssl-devel.x86_64
+    state: "{{ onoff }}"
+- name: current pcre devel
+  yum:
+    name: pcre-devel.x86_64
+    state: "{{ onoff }}"
+- name: current pcre 2
+  yum:
+    name: pcre2.x86_64
+    state: "{{ onoff }}"
+- name: current pcre2 devel
+  yum:
+    name: pcre2-devel.x86_64
+    state: "{{ onoff }}"
+- name: current apr devel
+  yum:
+    name: apr-devel.x86_64
+    state: "{{ onoff }}"
+- name: current apr-util
+  yum:
+    name: apr-util.x86_64
+    state: "{{ onoff }}"
+- name: current apr util devel
+  yum:
+    name: apr-util-devel.x86_64
+    state: "{{ onoff }}"

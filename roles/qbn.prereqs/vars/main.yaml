@@ -1,0 +1,6 @@
+# general
+# onoff: present
+#onoff: absent
+onoff: latest
+#updown: started
+updown: stopped

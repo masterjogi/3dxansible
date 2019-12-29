@@ -1,0 +1,3 @@
+-use the proper httpd24 from RHSCL. Currently not possible becaus of network/repository
+-integrate the mounting directly before use of the ansible remote repo currently this has to be done as a general prereq.
+

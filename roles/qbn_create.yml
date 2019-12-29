@@ -1,0 +1,16 @@
+# Test playbook to test all oracle modules
+---
+- hosts: localhost
+  gather_facts: true 
+  
+
+  vars:
+      oracle_home: /opt/oracle/instantclient_12_2
+      hostname: audi1.net.qbn
+      service_name: threedxp
+      user: system
+      password: manager
+      oracle_user:
+           - schema: testuser
+             schema_password: Enovia123
+             state: present

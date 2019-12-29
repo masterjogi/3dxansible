@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  gather_facts: true
+
+
+  vars:
+      hostname: audi1.net.qbn
+      service_name: threedxp
+      user: system
+      password: manager
+
+      oracle_sql:
+           - username: "{{ user }}"
+             password: "{{ password }}"
+             service_name: "{{ service_name }}"
+             sql: 'select username from dba_users'

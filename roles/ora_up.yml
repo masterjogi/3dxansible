@@ -1,0 +1,8 @@
+---
+ - hosts: Database
+   remote_user: root
+   tasks:
+     - name: make sure oracle is running
+       service: 
+         name: 3dora
+         state: started

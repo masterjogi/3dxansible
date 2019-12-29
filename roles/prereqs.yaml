@@ -1,0 +1,8 @@
+---
+- hosts: Appserver
+#  remote_user: root
+  tasks:
+  - debug:
+      msg: "before we run our role"
+  - include_role:
+      name: qbn.prereqs

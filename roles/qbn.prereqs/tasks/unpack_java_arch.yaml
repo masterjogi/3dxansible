@@ -1,0 +1,25 @@
+---
+- name: create target dir
+  remote_user: x3ds
+  file:
+    path: /app/3dexp/openjdk11.0.5_10_openj9_017
+    state: directory
+    mode: '0755'
+- name: Copy file with owner and permissions
+  copy:
+    src: /srv/bucket/3dx/middleware/OpenJDK11U-jdk_x64_linux_openj9_11.0.5_10_openj9-0.17.0.tar
+    dest: /tmp
+    owner: x3ds
+    group: x3ds
+    mode: '0755'
+- name: unpack current OpenJDK
+  unarchive:
+    src: /tmp/OpenJDK11U-jdk_x64_linux_openj9_11.0.5_10_openj9-0.17.0.tar
+    dest: /app/3dexp/openjdk11.0.5_10_openj9_017
+- name: create symbolic link to "openjdk" for simplicity
+  file:
+    src: /app/3dexp/openjdk11.0.5_10_openj9_017
+    dest: /app/3dexp/openjdk
+    owner: x3ds
+    group: x3ds
+    state: link

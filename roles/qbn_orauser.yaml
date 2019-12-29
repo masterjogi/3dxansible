@@ -1,0 +1,1 @@
+oracle_user: hostname=audi1.net.qbn service_name=threedxp user=system password=manager schema=testuser schema_password=Enovia123 default_tablespace=users state=present grants="'create session', create any table'"

@@ -1,0 +1,6 @@
+---
+- name: current lsb-release
+  remote_user: root
+  yum:
+    name: redhat-lsb
+    state: "{{ onoff }}"

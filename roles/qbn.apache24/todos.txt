@@ -1,0 +1,2 @@
+-use the proper httpd24 from RHSCL. Currently not possible becaus of network/repository
+

@@ -1,0 +1,11 @@
+---
+- name: Clone the github repo using ansible vault
+  hosts: localhost
+  vars_files: 
+     - secrets.yaml
+  tasks:
+  - name: clone the latest git repo
+    git:
+      #repo: https://github.com/masterjogi/3dxansible.git
+      repo: 'https://{{gituser}}:{{gitpass}}@github.com/masterjogi/3dxansible.git'
+      dest: /ansible/repo

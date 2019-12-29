@@ -1,0 +1,8 @@
+---
+- name: mount before unpack
+  remote_user: root
+  roles:
+    - role: ome.nfs_mount
+      nfs_share_mounts:
+      - path: /mnt/remote
+        location: ansible.net.qbn:/srv/bucket
